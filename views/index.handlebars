@@ -1,23 +1,22 @@
 <h1>Eat-Da-Burger!</h1>
 
+<h1>UN-DEVOURED BURGERS</h1>
+<ul>
+  {{#each burgers}}
+    {{#unless devoured}}
+      {{> burgers/burger-block devour=true}}
+    {{/unless}}
+  {{/each}}
+</ul>
 
-{{!-- {{#each burgers}}
-    <div>
-        <text>{{burger_name}}</text>
-        <button>DEVOUR</button>
-        <br> 
-    </div>
-{{/each}} --}}
-
-{{#each burgers}}
-    <div>
-        <text>{{burger_name}}</text>
-        <button id="devour-button" data-id="{{id}}" data-newdevour="{{devoured}}">
-          DEVOUR
-        </button>
-        <br> 
-    </div>
-{{/each}}
+<h1>DEVOURED BURGERS</h1>
+<ul>
+  {{#each burgers}}
+    {{#if devoured}}
+      {{> burgers/burger-block devour=false}} 
+    {{/if}}
+  {{/each}}
+</ul>
 
 <br>
 
@@ -58,22 +57,22 @@
       );
     });
 
-    $("#devour-button").on("click", function(event) {
+    $(".devour-button").on("click", function(event) {
       // Make sure to preventDefault on a submit event.
       var id = $(this).data("id");
       var newDevour = $(this).data("newdevour");
       
-      console.log(id);
+      // console.log(id);
       console.log(newDevour);
 
       var newDevourState = {
-      devoured: 1
-    };
+        devoured: 1
+      };
 
       // Send the POST request.
       $.ajax("/api/burgers/" + id, {
         type: "PUT",
-        data: newDevour
+        data: newDevourState
       }).then(
         function() {
           console.log("updated burger");

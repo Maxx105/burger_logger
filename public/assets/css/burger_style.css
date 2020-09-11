@@ -1,0 +1,21 @@
+body {
+    background-color: lightyellow;
+}
+
+#body {
+    text-align: center;
+    background-color: lightyellow;
+}
+
+/* #undevoured {
+    float: left;
+} */
+
+#devoured {
+    float: right;
+}
+
+/* #input {
+    clear: both;
+} */
+

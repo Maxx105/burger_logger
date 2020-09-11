@@ -5,53 +5,53 @@
       <h1>Eat-Da-Burger!</h1>
     </div>
   </div>
+    <div style="text-align: center;">
+      <div class="row">
+        <div class="col-lg-6 col-xs-12">
+          <div id="undevoured" class="card" style="width: 30rem; margin-top:30px;">
+            <ol class="list-group list-group-flush">
+              {{#each burgers}}
+                {{#unless devoured}}
+                  <div style="border-style: solid; border-color: black;">
+                    {{> burgers/burger-block devour=false}}
+                  </div>
+                {{/unless}}
+              {{/each}}
+            </ol>
+          </div>
+        </div>
 
-  <div class="row">
-    <div class="col-lg-6">
-      <div id="undevoured" class="card" style="width: 30rem;">
-        <ol class="list-group list-group-flush">
-          {{#each burgers}}
-            {{#unless devoured}}
-              <div style="border-style: solid; border-color: black;">
-                {{> burgers/burger-block devour=false}}
-              </div>
-            {{/unless}}
-          {{/each}}
-        </ol>
+
+        <div class="col-lg-6 col-xs-12">
+          <div id="devoured" class="card" style="width: 30rem; margin-top:30px;">
+            <ol class="list-group list-group-flush">
+              {{#each burgers}}
+                {{#if devoured}}
+                  <div style="border-style: solid; border-color: grey; color:grey">
+                    {{> burgers/burger-block devour=true}}
+                  </div>
+                {{/if}}
+              {{/each}}
+            </ol>
+          </div>
+        </div>
       </div>
     </div>
+  <br>
 
+  <div id="input">
+    <form class="create-form">
 
-    <div class="col-lg-6">
-      <div id="devoured" class="card" style="width: 30rem;">
-        <ol class="list-group list-group-flush">
-          {{#each burgers}}
-            {{#if devoured}}
-              <div style="border-style: solid; border-color: grey; color:grey">
-                {{> burgers/burger-block devour=true}}
-              </div>
-            {{/if}}
-          {{/each}}
-        </ol>
+      <div class="form-group">
+        <input type="text" id="burgerName" name="burger_name" style="width: 30rem;">
       </div>
-    </div>
+      
+      <div class="form-group">
+        <button name="submit" value='0' id="submit" class="submit">Submit</button>
+      </div>
+
+    </form>
   </div>
-
-    <br>
-
-    <div id="input">
-      <form class="create-form">
-
-        <div class="form-group">
-          <input type="text" id="burgerName" name="burger_name">
-        </div>
-        
-        <div class="form-group">
-          <button name="submit" value='0' id="submit" class="submit">Submit</button>
-        </div>
-
-      </form>
-    </div>
 </div>
 
 <script>

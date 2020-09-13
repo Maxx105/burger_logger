@@ -6,11 +6,11 @@ var jawsDBPassword = "n7axlzl90ns1b9hz";
 var jawsDBDatabase = "rw3id7ay13li50x6";
 
 var connection = mysql.createConnection({
-  host: "localhost" || jawsDBHost,
+  host: jawsDBHost,
   port: 3306,
-  user: "root" || jawsDBUser,
-  password: "password" || jawsDBPassword,
-  database: "burgers_db" || jawsDBDatabase
+  user: jawsDBUser,
+  password: jawsDBPassword,
+  database: jawsDBDatabase
 });
 
 connection.connect(function(err) {

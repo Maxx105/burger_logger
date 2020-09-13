@@ -1,16 +1,16 @@
 var mysql = require("mysql");
 
-var jawsDBHost = "d1kb8x1fu8rhcnej.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
-var jawsDBUser = "t1jfthwc2450mfig";
-var jawsDBPassword = "n7axlzl90ns1b9hz";
-var jawsDBDatabase = "rw3id7ay13li50x6";
+// var jawsDBHost = "d1kb8x1fu8rhcnej.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
+// var jawsDBUser = "t1jfthwc2450mfig";
+// var jawsDBPassword = "n7axlzl90ns1b9hz";
+// var jawsDBDatabase = "rw3id7ay13li50x6";
 
 var connection = mysql.createConnection({
-  host: jawsDBHost,
+  host: "d1kb8x1fu8rhcnej.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
   port: 3306,
-  user: jawsDBUser,
-  password: jawsDBPassword,
-  database: jawsDBDatabase
+  user: "t1jfthwc2450mfig",
+  password: "n7axlzl90ns1b9hz",
+  database: "rw3id7ay13li50x6"
 });
 
 connection.connect(function(err) {

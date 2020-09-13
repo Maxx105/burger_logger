@@ -11,14 +11,14 @@
     float: right;
     height: 50px;
 }
-
+/* 
 button:hover {
     background-color: lightgrey;
 }
 
 button:active {
     background-color: grey;
-}
+} */
 
 .card {
     margin-top: 30px;
@@ -28,6 +28,7 @@ button:active {
     border-style: solid; 
     border-color: black;
     border-width: thin;
+    border-radius: 3px;
 }
 
 #devouredListStyle {
@@ -35,6 +36,7 @@ button:active {
     border-color: grey; 
     color:grey;
     border-width: thin;
+    border-radius: 3px;
 }
 
 li {

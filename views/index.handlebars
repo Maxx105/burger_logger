@@ -7,11 +7,11 @@
   </div>
     <div class="row">
       <div class="col-lg-6 col-xs-12">
-        <div id="undevoured" class="card" style="margin-top:30px;">
+        <div id="undevoured" class="card">
           <ol class="list-group list-group-flush">
             {{#each burgers}}
               {{#unless devoured}}
-                <div style="border-style: solid; border-color: black;">
+                <div id="undevouredListStyle">
                   {{> burgers/burger-block devour=false}}
                 </div>
               {{/unless}}
@@ -22,11 +22,11 @@
 
 
       <div class="col-lg-6 col-xs-12">
-        <div id="devoured" class="card" style="margin-top:30px;">
+        <div id="devoured" class="card">
           <ol class="list-group list-group-flush">
             {{#each burgers}}
               {{#if devoured}}
-                <div style="border-style: solid; border-color: grey; color:grey">
+                <div id="devouredListStyle">
                   {{> burgers/burger-block devour=true}}
                 </div>
               {{/if}}

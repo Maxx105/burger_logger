@@ -9,6 +9,7 @@
 
 .devour-button {
     float: right;
+    height: 50px;
 }
 
 button:hover {
@@ -17,6 +18,27 @@ button:hover {
 
 button:active {
     background-color: grey;
+}
+
+.card {
+    margin-top: 30px;
+}
+
+#undevouredListStyle {
+    border-style: solid; 
+    border-color: black;
+    border-width: thin;
+}
+
+#devouredListStyle {
+    border-style: solid; 
+    border-color: grey; 
+    color:grey;
+    border-width: thin;
+}
+
+li {
+    height: 50px;
 }
 
 

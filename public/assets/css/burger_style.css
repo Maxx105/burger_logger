@@ -1,21 +1,25 @@
-body {
+/* body {
     background-color: lightyellow;
-}
+} */
 
 #body {
     text-align: center;
     background-color: lightyellow;
 }
 
-/* #undevoured {
-    float: left;
-} */
-
-/* #devoured {
+.devour-button {
     float: right;
-} */
+}
 
-/* #input {
-    clear: both;
-} */
+button:hover {
+    background-color: lightgrey;
+}
+
+button:active {
+    background-color: grey;
+}
+
+
+
+
 
